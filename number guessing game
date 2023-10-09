@@ -1,0 +1,24 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime> 
+using namespace std;
+
+int main() {
+  int number,guess,tries=0;
+  srand(time(0));
+  number = rand()%100+1;
+  cout<<"Guessing number between 1 and 100"<<endl<<endl;
+  do{
+    cout<<"Enter a number between 1 and 100"<<" ";
+    cin>>guess;
+    tries++;
+    if(guess>number)
+      cout<<"this is too high enter a low value"<<endl<<endl;
+    else if(guess<number)
+      cout<<"this is too low enter a high value"<<endl<<endl;
+    else
+      cout<<"correct! you gussed in"<<" "<<tries<<" "<<"guess"<<endl; 
+  }
+    while(number!=guess);
+    return 0;
+}
